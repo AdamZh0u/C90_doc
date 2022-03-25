@@ -9,6 +9,11 @@ repo_url: https://github.com/AdamZh0u/C90_doc
 
 docs_dir: doc
 
+nav:
+  - Home: 'index.md'
+  - Pandas: 'python/pandas.md'
+  - About: about.md
+
 theme:
   name: material
   language: zh
@@ -65,8 +70,7 @@ plugins:
   - git-revision-date-localized
   - minify:
       minify_html: true
-
-nav:
-  - Home: 'index.md'
-  - Pandas: 'python/pandas.md'
-  - About: about.md
+extra:
+  analytics:
+    provider: google
+    property: G-JGHVBFWGTV
