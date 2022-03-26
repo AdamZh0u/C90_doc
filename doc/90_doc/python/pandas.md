@@ -45,9 +45,6 @@ mode="w") as writer:  #Append or Write
 ```
 
 # DataFrame
-```python
-
-```
 
 # Tricks
 * Isnull 与 == None

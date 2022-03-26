@@ -13,13 +13,15 @@ docs_dir: doc
 nav:
   - Home: 0_index.md
   - Python:
-    - Main: python/0_index.md
-    - Mermaid: python/mermaid.md
+    - Basic: python/basic.md
     - Data Science: 
         - Pandas: 'python/pandas.md'
     - Plots:
       - Matplotlib: 'python/mpl.md'
       - My plots: 'python/my_plots.md'
+  - Tools:
+    - MkDocs: tools/mkdocs.md
+    - Mermaid: tools/mermaid.md
   - About:
     - Tags index: tags.md
     - About Me: about.md
