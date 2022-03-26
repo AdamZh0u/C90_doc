@@ -1,5 +1,6 @@
 # Welcome to the room of requirement!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is an open source book written for myself to review my tools.
 
-visit [Setting up site analytics - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#custom-site-feedback)
+
+

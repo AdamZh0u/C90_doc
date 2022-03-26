@@ -11,7 +11,10 @@ docs_dir: doc
 
 nav:
   - Home: 'index.md'
-  - Pandas: 'python/pandas.md'
+  - Python:
+    - Pandas: 'python/pandas.md'
+    - Matplotlib: 'python/mpl.md'
+    - My plots: 'python/my_plots.md'
   - About: about.md
 
 theme:
@@ -25,12 +28,12 @@ theme:
   search_index_only: false
 
   features:
-    - header.autohide
-    # - navigation.instant
+    - header.autohide # 隐藏标题
+    - navigation.instant
     # - navigation.expand
     # - navigation.sections
     - navigation.tracking
-    # - navigation.tabs
+    - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.top
     # - navigation.indexes
