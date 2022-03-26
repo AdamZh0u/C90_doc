@@ -3,6 +3,7 @@ site_url: https://doc.adamzhou.site/
 site_author: AdamZh0u
 site_description: >-
   Less is more.
+copyright: Copyright &copy; 2022  Adam Zhou
 
 repo_name: C90_doc
 repo_url: https://github.com/AdamZh0u/C90_doc
@@ -10,17 +11,27 @@ repo_url: https://github.com/AdamZh0u/C90_doc
 docs_dir: doc
 
 nav:
-  - Home: 'index.md'
+  - Home: 0_index.md
   - Python:
-    - Pandas: 'python/pandas.md'
-    - Matplotlib: 'python/mpl.md'
-    - My plots: 'python/my_plots.md'
-  - About: about.md
+  # 上级自动构成一个组
+    - Index: python/0_index.md
+    - Mermaid: python/mermaid.md
+    - Data Science: 
+        - Pandas: 'python/pandas.md'
+    - Plots:
+      - Matplotlib: 'python/mpl.md'
+      - My plots: 'python/my_plots.md'
+  - About:
+    - Tags index: tags.md
+    - About Me: about.md
 
+
+# https://squidfunk.github.io/mkdocs-material/setup/
 theme:
   name: material
   language: zh
-
+  icon:
+    logo: material/library-shelves
   static_templates:
     - 404.html
 
@@ -28,15 +39,18 @@ theme:
   search_index_only: false
 
   features:
-    - header.autohide # 隐藏标题
-    - navigation.instant
-    # - navigation.expand
-    # - navigation.sections
-    - navigation.tracking
-    - navigation.tabs
-    # - navigation.tabs.sticky
+  
+    # - header.autohide # 隐藏head
+    - navigation.tabs # head中的页面
+    # - navigation.tabs.sticky # 始终显示head中的页面 与autohide 相对
+
+    - navigation.instant # 即时加载
+    - navigation.tracking # 锚点
+    - navigation.expand # 显示完整目录树
+    - navigation.sections # 显示组
+    # - navigation.indexes # 启用索引页
     - navigation.top
-    # - navigation.indexes
+
     - search.highlight
     - search.share
     - search.suggest
@@ -46,7 +60,7 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: light blue
+      primary: indigo
       accent: deep purple
       toggle:
         icon: material/weather-sunny
@@ -62,6 +76,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+
   icon:
     repo: fontawesome/brands/github
 
@@ -69,11 +84,62 @@ theme:
 
 plugins:
   - search:
-      lang: ja
+      separator: '[\s\-\.]'
+      prebuild_index: true # 
+      lang:
+        - en
+        - ja
+        #没中文
+  - tags:
+      tags_file: tags.md
   - git-revision-date-localized
   - minify:
       minify_html: true
+
+markdown_extensions:
+  - meta
+  - tables
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - md_in_html
+  # code highlight
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: true
+      linenums_style: pymdownx-inline
+      anchor_linenums: true # 把代码行作为锚点
+      auto_title: false # block标题显示编程语言
+  - pymdownx.inlinehilite # 行内代码高亮
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed: # 可以切换BLOCK页
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
 extra:
   analytics:
     provider: google
     property: G-JGHVBFWGTV
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AdamZh0u
+      name: AdamZh0u
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/adamzh0u
+      name: AdamZh0u
+    - icon: fontawesome/brands/researchgate
+      link: https://www.researchgate.net/profile/Adam-Zhou-3
+      name: AdamZhou
+  generator: false
+
+extra_javascript:
+  - mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
