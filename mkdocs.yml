@@ -11,17 +11,17 @@ repo_url: https://github.com/AdamZh0u/C90_doc
 docs_dir: doc
 
 nav:
-  - Home: 0_index.md
+  - Home: index.md
   - Python:
-    - Basic: python/basic.md
-    - Data Science: 
-        - Pandas: 'python/pandas.md'
+    - Basic: 90_doc/python/basic.md
+    - Data Science:
+        - Pandas: 90_doc/python/pandas.md
     - Plots:
-      - Matplotlib: 'python/mpl.md'
-      - My plots: 'python/my_plots.md'
+      - Matplotlib: 90_doc/python/mpl.md
+      - My plots: 90_doc/python/my_plots.md
   - Tools:
-    - MkDocs: tools/mkdocs.md
-    - Mermaid: tools/mermaid.md
+    - MkDocs: 90_doc/tools/mkdocs.md
+    - Mermaid: 90_doc/tools/mermaid.md
   - About:
     - Tags index: tags.md
     - About Me: about.md
