@@ -19,6 +19,8 @@ nav:
     - Plots:
       - Matplotlib: 90_doc/python/mpl.md
       - My plots: 90_doc/python/my_plots.md
+    - Geo:
+      - GeoPandas: 90_doc/python/geopandas.md
   - Tools:
     - MkDocs: 90_doc/tools/mkdocs.md
     - Mermaid: 90_doc/tools/mermaid.md
@@ -107,6 +109,7 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
+      title: TOC
   - md_in_html
   # code highlight
   - pymdownx.highlight:

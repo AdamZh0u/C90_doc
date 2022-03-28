@@ -100,7 +100,6 @@ df.style.format({"a":"${:.2f}", "target":"${:.5f}"})
 df_out
 ```
 
-![image](./00_img/df_formatting.jpg)
 
 ## Lower Case Columns
 
