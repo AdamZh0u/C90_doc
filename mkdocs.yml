@@ -22,6 +22,8 @@ nav:
   - Tools:
     - MkDocs: 90_doc/tools/mkdocs.md
     - Mermaid: 90_doc/tools/mermaid.md
+  - Models:
+    - Gravity: 90_doc/models/Gravity.md
   - About:
     - Tags index: tags.md
     - About Me: about.md
