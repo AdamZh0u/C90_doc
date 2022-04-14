@@ -13,24 +13,24 @@ docs_dir: doc
 nav:
   - Home: index.md
   ## Spatial DataScience
-  - SpatialDataScience:
+  - SDS:
     - Basic: 
       - python: 90_doc/SDS/00_basic.md
-    - DataManipulate:
+    - Data Manipulate:
       - Numpy: 90_doc/SDS/01_numpy.md
       - Pandas: 90_doc/SDS/02_pandas.md
-    - ScientificPlots:
+    - Scientific Plots:
       - Matplotlib: 90_doc/SDS/03_mpl.md
       - Seaborn: 90_doc/SDS/04_seaborn.md
       - My plots: 90_doc/SDS/09_my_plots.md
     - Geo:
       - Spatial: 90_doc/SDS/10_spatial.md
       - GeoPandas: 90_doc/SDS/11_gpd.md
-      - GoogleEarthEngine: 90_doc/SDS/12_gee.md
+      - Google Earth Engine: 90_doc/SDS/12_gee.md
       - PostGis:  90_doc/SDS/13_postgis.md
     - Scipy:
       - Scipy: 90_doc/SDS/21_scipy.md
-    - MachineLearning: 
+    - Machine Learning: 
       - Scikit-Learn: 90_doc/SDS/31_sklearn.md
       - PyTorch: 90_doc/SDS/32_torch.md
     - Other:
@@ -55,10 +55,10 @@ nav:
     #   - RD:
   ## tools
   - Tools:
+    - WinSettings: 90_doc/tools/windows.md
     - MkDocs: 90_doc/tools/mkdocs.md
     - Mermaid: 90_doc/tools/mermaid.md
     - VsCode: 90_doc/tools/vscode/vscode.md
-    - WinSettings: 90_doc/tools/windows.md
     - Zotero: 90_doc/tools/Zotero.md
     - Obsidian: 90_doc/tools/obsidian/Obsidian.md
     - Git: 90_doc/tools/git.md
