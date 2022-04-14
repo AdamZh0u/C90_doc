@@ -39,20 +39,20 @@ nav:
   - Models:
     - Mobility:
       - Gravity: 90_doc/models/Gravity.md
-      - Radiation:
-      - Container:
+      #- Radiation:
+      #- Container:
     - Semantic:
       - Word2Vec: 90_doc/models/word2vec.md
-    - Geographic:
-      - GWR: 
-    - Decomposition:
-      - PCA:
-      - SVD:
-      - Tucker:
-    - Graph/Network:
-    - Eco:
-      - DID:
-      - RD:
+    #- Geographic:
+      #- GWR: 
+    # #- Decomposition:
+    #   - PCA:
+    #   - SVD:
+    #   - Tucker:
+    # - Graph/Network:
+    # - Eco:
+    #   - DID:
+    #   - RD:
   ## tools
   - Tools:
     - MkDocs: 90_doc/tools/mkdocs.md
