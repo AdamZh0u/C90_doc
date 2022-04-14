@@ -1,10 +1,10 @@
 https://github.com/vinta/awesome-python
-## 
+## Python Basic
 
 100_0000
 [下划线（_）在python中的作用 | 酷python](http://www.coolpython.net/python_senior/senior_feature/underline_effect.html)
 
-## OS
+# OS
 ```python
 import os 
 base_dir = os.path.dirname(os.path.realpath('__file__')) 
@@ -13,12 +13,12 @@ print(base_dir)
 base_dir = os.getcwd()
 ```
 
-## argparse
+# argparse
 ```python
 
 ```
 
-## pickle
+# pickle
 ```python
 with open("data/ind.{}.{}".format(dataset, names[i]), 'rb') as rf:
 	u = pkl._Unpickler(rf)
@@ -30,7 +30,7 @@ with open("data/ind.{}.{}".format(dataset, names[i]), 'rb') as rf:
 ### cpickel
 >The `pickle` module has an transparent optimizer (`_pickle`) written in C. It is used whenever available. Otherwise the pure Python implementation is used.
 
-[19191859](https://stackoverflow.com/questions/19191859/what-difference-between-pickle-and-pickle-in-python-3)
+[what-difference-between-pickle-and-pickle-in-python-3](https://stackoverflow.com/questions/19191859/what-difference-between-pickle-and-pickle-in-python-3)
 
 ### 速度对比
 * 为什么pkl.Unpickler更快？
@@ -171,3 +171,125 @@ jit_mat = jax_it(mat)
 ```
 
 
+# Jupyter notebook
+
+# Jupyter Lab
+
+```bash
+jupyter lab
+```
+
+* 使用脚本
+
+```
+%%cmd
+where python
+
+## %cd 和!cd的区别
+%cd
+
+%ls
+```
+
+## 配置
+- 未关闭的jupyter导致开启错误
+	- [how to close running jupyter notebook servers? · Issue #2844 · jupyter/notebook · GitHub](https://github.com/jupyter/notebook/issues/2844)
+	- [how to close running jupyter notebook servers? · Issue #2844 · jupyter/notebook · GitHub](https://github.com/jupyter/notebook/issues/2844)
+```bash
+## 显示正在跑的server
+jupyter lab list
+
+##Check where your runtime folder is located:  
+jupyter --paths
+
+## Remove all files in the runtime folder:  
+rm -r [path to runtime folder]/*
+
+## Then relaunch your notebook on the desired ip and port:  
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &
+```
+
+
+# Conda
+
+##  Basic
+* 创建
+```bash
+conda create -n py3 python=3.5
+```
+* 删除
+
+```bash
+conda env remove -n py3
+```
+
+* 重命名--复制删除
+
+```bash
+# 复制
+conda create -n conda-new --clone conda-old
+# 删除
+conda remove -n conda-old --all
+```
+
+* 常用包的安装
+
+```bash
+conda install -c conda-forge jupyterlab numpy pandas matplotlib
+```
+
+* 更新包
+
+```bash
+## 重新安装
+conda uninstall 
+conda install package==version
+
+## 更新conda
+conda update conda
+
+```
+* 换源
+	* 
+* 理解conda
+	* 就像一个诊所和医院，单个python是一个诊所，可以看所有的病，但是如果病情复杂，不同的功能之间会有矛盾，这时候需要专科门诊，在医院，每一个门诊的功能不相同，病人的要求也不同。
+
+* 清理
+```bash
+conda clean -p //删除没有用的包（推荐） 
+
+conda clean -t //tar打包
+
+conda clean -y -all //删除全部的安装包及cache
+
+conda clean --all
+```
+
+## 环境文件
+- 生成requirements.txt文件
+```bash
+pip freeze > requirements.txt
+```
+- 从文件安装
+```python
+conda env create --file=myfile.yaml
+
+
+```
+- 安装requirements.txt依赖
+```bash
+# pip
+pip install -r environment.yml
+
+# 使用conda
+conda env update -n <env> --file environment.yml
+```
+
+## Q&A
+### colab 安装conda
+```
+!pip install -q condacolab
+import condacolab
+condacolab.install()
+```
+### `-c conda-forge `什么意思？
