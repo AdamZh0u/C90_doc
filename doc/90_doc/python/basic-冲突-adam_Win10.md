@@ -1,4 +1,8 @@
 https://github.com/vinta/awesome-python
+## 
+
+100_0000
+[下划线（_）在python中的作用 | 酷python](http://www.coolpython.net/python_senior/senior_feature/underline_effect.html)
 
 ## OS
 ```python
@@ -53,7 +57,7 @@ num_days_data = (date_data_end-date_data_begin).days
 date_data_begin - datetime.timedelta(days = diff_data_sim)
 ```
 
-# Gallery
+## Gallery
 * 下载数据或使用本地数据
 ```python
 def get_jhu_confirmed_cases():
@@ -105,7 +109,7 @@ df_concated = pd.concat(ls_dfs,ignore_index=True).drop({"Unnamed: 0","Unnamed: 0
 df_concated["类"] = df_concated.apply(lambda x: x["大类"]+"|"+x["中类"]+"|"+x["小类"], axis=1)
 ```
 
-# Pyzotero
+## Pyzotero
 ```python
 library_type = "user"
 library_id = "6486920"
@@ -119,3 +123,51 @@ items = zot.top(limit=5)
 for item in items:
     print('Item: %s | Key: %s' % (item['data']['itemType'], item['data']['key']))
 ```
+
+# Print  table to file 
+
+```python
+import docx
+from docx.shared import Pt
+
+#Print to file
+table = pd.DataFrame(d)
+
+doc = docx.Document()
+t = doc.add_table(table.shape[0]+1,table.shape[1])
+for j in range(table.shape[-1]):
+    t.cell(0,j).text = table.columns[j]
+
+for i in range(table.shape[0]):
+    for j in range(table.shape[-1]):
+        t.cell(i+1,j).text = str(table.values[i,j])
+for row in t.rows:
+    for cell in row.cells:
+        paragraphs = cell.paragraphs
+        for paragraph in paragraphs:
+            for run in paragraph.runs:
+                font = run.font 
+                font.name = 'Helvetica 55 Roman'
+                font.size = Pt(7)
+doc.save("../outputs/Extended_data/Extended_data_5_D1.docx")
+```
+
+
+# itertools
+
+
+# 高阶函数
+- 输入是函数的函数
+	- [引入一行代码让python提速50倍:两个jit库介绍_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1k44y1E7iW)
+
+```python
+from numba import jit
+@jit(nopython=True)
+
+# gpu tpu 更快
+from jax import jit as jax_jit
+@jax_jit
+jit_mat = jax_it(mat)
+```
+
+

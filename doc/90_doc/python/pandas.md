@@ -4,6 +4,47 @@ title: Pandas
 <https://github.com/firmai/pandasvault#table-processing>
 <https://mp.weixin.qq.com/s/jJFnPvBtrCsnDaIOcg_Jhg>
 
+## tips
+- 在函数中，修改df需要copy，即使只在函数中更改df然后调用函数输出df_x，全局对象df还是会被修改
+- duplicated中的keep非常关键，如果keep=False则返回所有重复的列，否则只返回排除之后的列
+
+# Settings
+```python
+# some settings
+import warnings
+#warnings.filterwarnings(action='once') ## 
+warnings.filterwarnings('ignore') ## Hide all warnings in ipython
+
+#os.chdir("E:/200_CASA/06_DSSS/") ## set current working directory 
+
+pd.set_option('display.max_rows', 300)
+pd.options.display.float_format = '{:40,.4f}'.format # specifies default number format to 4 decimal places
+
+## font used to plot 
+font1 = {'family' : 'Arial', 'weight' : 'normal', 'size'   : 12}
+
+```
+## My funcs
+
+```python
+df.groupby("type").count().sort_values(by="id",ascending= False).reset_index()[["type","id"]][:10]
+
+
+def print_full(x):
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.width', 2000)
+    pd.set_option('display.float_format', '{:20,.2f}'.format)
+    pd.set_option('display.max_colwidth', None)
+    print(x)
+    pd.reset_option('display.max_rows')
+    pd.reset_option('display.max_columns')
+    pd.reset_option('display.width')
+    pd.reset_option('display.float_format')
+    pd.reset_option('display.max_colwidth')
+	
+	
+```
 ## Configure Pandas
 
 ```python

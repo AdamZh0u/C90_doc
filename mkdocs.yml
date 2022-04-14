@@ -15,26 +15,35 @@ nav:
   - Python:
     - Basic: 90_doc/python/basic.md
     - Data Science:
-        - Pandas: 90_doc/python/pandas.md
+      - Pandas: 90_doc/python/pandas.md
     - Plots:
       - Matplotlib: 90_doc/python/mpl.md
       - My plots: 90_doc/python/my_plots.md
     - Geo:
       - GeoPandas: 90_doc/python/geopandas.md
+    - MachineLearning:
+      - TorchL: 90_doc/python/torch.md
   - Tools:
     - MkDocs: 90_doc/tools/mkdocs.md
     - Mermaid: 90_doc/tools/mermaid.md
+    - VsCode: 90_doc/tools/vscode/vscode.md
+    - WinSettings: 90_doc/tools/vscode/windows.md
+    - Zotero: 90_doc/tools/Zotero.md
+    - Obsidian: 90_doc/tools/obsidian/Obsidian.md
+    - Git: 90_doc/tools/git.md
   - Models:
     - Gravity: 90_doc/models/Gravity.md
+    - Word2Vec: 90_doc/models/word2vec.md
   - About:
     - Tags index: tags.md
     - About Me: about.md
+    - Links: 90_doc/Links.md
 
 
 # https://squidfunk.github.io/mkdocs-material/setup/
 theme:
   name: material
-  language: zh
+  language: en
   # favicon: material/library-shelves
   # icon:
   #   logo: material/library-shelves

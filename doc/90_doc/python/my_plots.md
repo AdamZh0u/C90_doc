@@ -114,7 +114,25 @@ for n, group in data_size.groupby('level'):
     ys.append(hist)
 ```
 
+###
+```python
+import matplotlib.pyplot as plt
+    
+plt.triplot(tri.points[:,0], tri.points[:,1], tri.simplices, color='red')
 
+x_lines = []
+y_lines = []
+
+for p1,p2 in edges:
+    x1,y1 = points[p1]
+    x2,y2 = points[p2]
+    plt.plot([x1,x2],[y1,y2], color='blue')
+
+plt.scatter(points[:,0],points[:,1])
+
+plt.show()
+
+```
 
 ## WHU
 

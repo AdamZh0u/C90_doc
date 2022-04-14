@@ -88,37 +88,11 @@ default.get_fontconfig_pattern()
 ```
 
 
-
-
-    'sans\\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0'
-
-
-
-
 ```python
 ## 查找系统字体
 mpl.font_manager.findSystemFonts(fontpaths="D:\\ENVI\\IDL85\\resource\\fonts\\tt", fontext='ttf')
 ```
 
-
-
-
-    ['D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0419m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0011m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt9830z_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt9831z_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0582m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0583m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\envisym_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0014m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0012m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0005m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0611m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0006m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0013m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0004m_.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\DejaVuSans.ttf',
-     'D:\\ENVI\\IDL85\\resource\\fonts\\tt\\tt0003m_.ttf']
 
 
 
@@ -128,13 +102,6 @@ mpl.font_manager.findSystemFonts(fontpaths="D:\\ENVI\\IDL85\\resource\\fonts\\tt
 fm = mpl.font_manager.FontManager(size=None, weight='normal') 
 fm.defaultFont
 ```
-
-
-
-
-    {'ttf': 'd:\\anaconda\\envs\\py37\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf',
-     'afm': 'd:\\anaconda\\envs\\py37\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\pdfcorefonts\\Helvetica.afm'}
-
 
 
 #### 查找后使用
